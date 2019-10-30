@@ -14,7 +14,7 @@ const Numbers = () => {
   const [listOfNumbers, setListOfNumbers] = useState(numbers)
   
   const buttons = listOfNumbers.map(num => {
-    return <NumberButton />
+    return <NumberButton key={num} number={num}/>
   })
   return (
     <div>
