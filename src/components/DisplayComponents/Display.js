@@ -9,3 +9,5 @@ const Display = () => {
     </div>
   );
 };
+
+export default Display;
