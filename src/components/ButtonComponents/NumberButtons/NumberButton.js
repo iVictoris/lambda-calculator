@@ -8,3 +8,5 @@ const NumberButton = ({number}) => {
     </>
   );
 };
+
+export default NumberButton;
