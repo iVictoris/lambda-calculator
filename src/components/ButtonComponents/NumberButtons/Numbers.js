@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NumberButton from "./NumberButton";
+import {createElements} from '../../../util/mapItems';
 
 //import any components needed
 // example of import from data.js. Note all the ../   This is how we move through folders.
@@ -13,9 +14,9 @@ const Numbers = () => {
   // STEP 2 - add the imported data to state
   const [listOfNumbers, setListOfNumbers] = useState(numbers);
 
-  const buttons = listOfNumbers.map(num => {
-    return <NumberButton key={num} number={num} />;
-  });
+  const createNumberButtons = createElements(NumberButton);
+
+  const buttons = listOfNumbers.map(createNumberButtons);
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
