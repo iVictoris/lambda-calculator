@@ -56,3 +56,8 @@ code {
 .special {
   background: #215C9D;
 }
+
+.specialNumber {
+  width: 175px;
+  border-radius: 50px;
+}
