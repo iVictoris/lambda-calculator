@@ -8,6 +8,12 @@ import {operators} from '../../../data';
 import {createElements} from '../../../util/mapItems';
 
 const Operators = () => {
+
+  const [operatorChars, setOperatorChars] = useState(operators)
+  const createOperatorButtons = createElements(OperatorButton);
+
+  const buttons = operatorChars.map(createOperatorButtons);
+
   // STEP 2 - add the imported data to state
   return (
     <div>
