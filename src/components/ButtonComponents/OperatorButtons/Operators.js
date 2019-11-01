@@ -9,7 +9,7 @@ import { createElements } from "../../../util/mapItems";
 
 const Operators = () => {
   const [operatorChars, setOperatorChars] = useState(operators);
-  const createOperatorButtons = createElements(OperatorButton);
+  const createOperatorButtons = createElements(OperatorButton, true);
 
   const buttons = operatorChars.map(createOperatorButtons);
 
@@ -19,7 +19,7 @@ const Operators = () => {
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
         component matching the name on the provided file. Pass
         it any props needed by the child component*/}
-        {buttons}
+      {buttons}
     </div>
   );
 };
