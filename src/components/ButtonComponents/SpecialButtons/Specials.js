@@ -13,7 +13,7 @@ const Specials = () => {
 
   const createSpecialButtons = createElements(SpecialButton);
 
-  const buttons = createSpecialButtons(specialChars);
+  const buttons = specialChars.map(createSpecialButtons);
   return (
     <div>
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
