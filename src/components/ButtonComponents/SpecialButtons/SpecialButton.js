@@ -8,3 +8,5 @@ const SpecialButton = (value) => {
     </>
   );
 };
+
+export default SpecialButton;
