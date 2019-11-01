@@ -4,7 +4,7 @@ const NumberButton = ({value, className}) => {
   return (
     <>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
-      <button className={className}>
+      <button className={className.concat(' numbers')}>
       {value}
       </button>
     </>
