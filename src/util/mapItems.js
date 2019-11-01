@@ -1,5 +1,7 @@
-import React from 'react';
+import React from "react";
 
-export const createElements = (ImportedComponent) => (value) => {
-  return <ImportedComponent value={value} key={value} />
-}
+export const createElements = (ImportedComponent, acceptObjects = false) => {
+  if (acceptObjects)
+    return ({ value }) => <ImportedComponent value={value} key={value} />;
+  return value => <ImportedComponent value={value} key={value} />;
+};
