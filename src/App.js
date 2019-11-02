@@ -5,6 +5,10 @@ import "./App.css";
 
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
+import Display from "./components/DisplayComponents/Display";
+import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
+import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -18,6 +22,29 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
+        <Display />
+        <>
+          <section className="buttons-flex">
+            <section className="left-half-flex">
+              <Specials />
+              <Numbers />
+            </section>
+            <section className="right-half-flex">
+              <Operators />
+            </section>
+          </section>
+        </>
+
+        {/* two columns flex boxes,
+          specials and numbers go on left column via flex-box
+          operations go on right column as flex-direction: column;*/}
+        {/**
+        -----|--|
+        -----|  |
+        -----|  |
+        -----|  |
+        _____|__|
+        */}
       </div>
     </div>
   );
